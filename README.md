@@ -115,6 +115,9 @@ $ git commit -m 'update'
 ```bash
 # logをファイル構成を含めて表示する
 $ git log --stat
+
+# logをワンラインで表示する
+$ git log --oneline
 ```
 
 ### git diff
