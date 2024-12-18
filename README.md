@@ -33,6 +33,8 @@ ctrl + A
 ctrl + E
 ```
 
+<br/>
+
 ## gitコマンド一覧
 
 ```bash
@@ -53,10 +55,36 @@ $ git status
 
 ```
 
+<br/>
+
+
 ### git blame
 コミットされたファイルの詳細を確認する。  
 HEAD, 変更者, 変更日時、変更内容を確認できる。
 
+<br/>
+
+## GUIの活用
+
+```bash
+$ brew install git-gui
+```
+
+```bash
+# git guiを開く
+$ git gui
+$ git citool
+
+# コミットログ確認ウィンドウを開く
+$ gitk
+```
+
+<br/>
+
+**todo**  
+GUIアプリケーションの作成については、`tcl/tk`を学ぶ
+
+<br/>
 
 ## リポジトリの基本操作
 
@@ -89,6 +117,18 @@ $ git commit -m 'update'
 $ git log --stat
 ```
 
+### git diff
+ステージング前のファイルに対して、変更内容を確認する。
+
+```bash
+# ステージングされていないファイルの変更内容を確認する
+$ git diff
+```
+
+```bash
+# ステージングされたファイルの変更内容を確認する
+$ git diff --staged
+```
 
 
 
