@@ -2,6 +2,15 @@
 
 独習Gitの学習の記録。  
 
+## tips
+
+### catコマンド
+
+```bash
+# 行番号を付けてファイルの内容を出力する
+$ cat -n README.md
+```
+
 ## git guiのインストール
 
 基本的にはCUIで操作するので、GUIはほとんど使わない。
@@ -96,6 +105,15 @@ GUIアプリケーションの作成については、`tcl/tk`を学ぶ
 $ git init
 ```
 
+### git add
+変更をステージングする。 
+
+```bash
+# 予行練習(結果の事前確認)
+$ git add --dry-run .
+$ git add -n .
+```
+
 ### git commit
 
 変更を記録する。  
@@ -110,6 +128,12 @@ $ git commit -m 'update'
 >  create mode 100644 glossary.md
 ```
 
+```bash
+# 変更全てをステージングしてコミットする
+$ git commit -a -m 'update'
+$ git commit --all -m 'update'
+```
+
 ### git log
 
 ```bash
@@ -118,6 +142,9 @@ $ git log --stat
 
 # logをワンラインで表示する
 $ git log --oneline
+
+# logの短い情報を付加して表示する
+$ git log --shortstat
 ```
 
 ### git diff
@@ -131,6 +158,14 @@ $ git diff
 ```bash
 # ステージングされたファイルの変更内容を確認する
 $ git diff --staged
+```
+
+### git restore
+ステージングしたファイルをステージングから取り戻す。
+
+```bash
+# eをステージングから取り戻す
+$ git restore --staged e
 ```
 
 
