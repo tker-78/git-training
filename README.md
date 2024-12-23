@@ -362,3 +362,25 @@ $ git checkout -b new_branch starting_at
 `starting_at`には、コミットのSHA1 ID, タグ、ブランチ名を指定できる
 
 
+```bash
+# ブランチ切り替えのログを確認する
+$ git reflog
+290ee84 (HEAD -> master, dev) HEAD@{0}: checkout: moving from dev to master
+290ee84 (HEAD -> master, dev) HEAD@{1}: checkout: moving from dev to dev
+290ee84 (HEAD -> master, dev) HEAD@{2}: checkout: moving from master to dev
+290ee84 (HEAD -> master, dev) HEAD@{3}: merge dev: Fast-forward
+711506c HEAD@{4}: checkout: moving from dev to master
+290ee84 (HEAD -> master, dev) HEAD@{5}: commit: update readme
+efe2b2b HEAD@{6}: commit: new branch
+711506c HEAD@{7}: checkout: moving from master to dev
+711506c HEAD@{8}: checkout: moving from 68337260283c3e135b60c05dae2968b61d33204f to master
+6833726 HEAD@{9}: checkout: moving from master to anchor
+711506c HEAD@{10}: commit: update
+cc4cd9a HEAD@{11}: checkout: moving from 68337260283c3e135b60c05dae2968b61d33204f to master
+6833726 HEAD@{12}: checkout: moving from master to anchor
+cc4cd9a HEAD@{13}: commit: update
+6833726 HEAD@{14}: checkout: moving from 96da4a18ec4fe8a39db1a3b83ec59ed24f64659f to master
+96da4a1 HEAD@{15}: checkout: moving from master to 96da
+6833726 HEAD@{16}: commit: update README
+57bfcf1 (origin/master) HEAD@{17}: commit: update README
+```
