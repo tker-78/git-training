@@ -247,3 +247,44 @@ $ git checkout -- sample.txt
 
 ここで、`--`はオプション指定の終了を明示的に表す。
 これがないと、`sample.txt`をコミットIDやブランチ名と誤解される可能性がある。
+
+
+
+
+### コミットログの確認(git log)
+
+```bash
+$ git log --parents --oneline
+57bfcf1 05fec74 (HEAD -> master, origin/master) update README
+05fec74 5d85678 add f
+5d85678 1202375 add bb and update README
+1202375 2091f88 rename b to bb
+2091f88 fbc0bb2 delete a
+fbc0bb2 96da4a1 finished section6
+96da4a1 d673f05 added new four files
+d673f05 b3cf55f update readme
+b3cf55f 14aac92 adding a text
+14aac92 82b1418 新しいファイルの追加
+82b1418 4ed1895 update
+4ed1895 132b89c update
+132b89c initial commit
+```
+
+現在のSHA1 ID 親のSHA1 IDの順に表示される。
+
+
+```bash
+# 変更の詳細も確認
+$ git log --patch
+
+# 変更箇所数も確認
+$ git log --stat
+```
+
+
+### 特定のバージョンのファイルを取り戻す
+
+```bash
+$ git rev-parse HEAD
+$ git rev-parse master
+```
