@@ -354,4 +354,11 @@ $ git tag -d anchor
 $ git log --graph --decorate --pretty=oneline --all --abbrev-commit
 ```
 
+```bash
+# 開始地点を指定してブランチを作成
+$ git checkout -b new_branch starting_at
+```
+
+`starting_at`には、コミットのSHA1 ID, タグ、ブランチ名を指定できる
+
 
