@@ -288,3 +288,38 @@ $ git log --stat
 $ git rev-parse HEAD
 $ git rev-parse master
 ```
+
+```bash
+# 特定のバージョンに戻す(HEADが96daになる)
+$ git checkout 96da
+```
+
+```bash
+# 最新のバージョンに戻す
+$ git checkout master
+```
+
+
+### コミットにタグをつける
+```bash
+$ git tag anchor 6833726
+```
+
+```bash
+# タグが表示される
+$ git log --oneline
+6833726 (HEAD -> master, tag: anchor) update README
+57bfcf1 (origin/master) update README
+05fec74 add f
+5d85678 add bb and update README
+1202375 rename b to bb
+2091f88 delete a
+fbc0bb2 finished section6
+96da4a1 added new four files
+d673f05 update readme
+b3cf55f adding a text
+14aac92 新しいファイルの追加
+82b1418 update
+4ed1895 update
+132b89c initial commit
+```
