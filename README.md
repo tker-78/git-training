@@ -168,9 +168,10 @@ $ git diff --staged
 $ git restore --staged e
 ```
 
+<br/>
 
 
-### レポジトリからの削除
+### レポジトリからの削除(git rm)
 
 `git rm`を使うと、削除と同時に変更をステージングしてくれる。
 
@@ -206,17 +207,18 @@ Changes to be committed:
 $ git commit -m 'deleting a'
 ```
 
-### ファイル名の変更
+### ファイル名の変更(git mv)
 
 同様に、ファイル名を変更する場合は、
 gitのコマンド`git mv`か、osコマンド`mv` + `git add`を行う。
 
-### 部分的にステージングする
+### 部分的にステージングする(git add -p)
 変更箇所のうち、コミットしたくない箇所がある場合、
 部分的にステージングすることができる。
 
 ```bash
-$ git add -e
+$ git add -p
+# この後eを選択する
 ```
 
 vscodeでこの機能を使用する場合は、
@@ -228,3 +230,20 @@ $ git config -e
     editor = vim
 ```
 
+### ステージングエリアからの変更の削除(git reset)
+
+
+ステージングエリアの変更を取り消す
+
+```bash
+$ git reset bb.sh
+```
+
+### 変更前のファイルを取り戻す(git checkout)
+```bash
+# 最後のコミットのファイルを取り戻す
+$ git checkout -- sample.txt
+```
+
+ここで、`--`はオプション指定の終了を明示的に表す。
+これがないと、`sample.txt`をコミットIDやブランチ名と誤解される可能性がある。
