@@ -314,12 +314,10 @@ $ git log --oneline
 5d85678 add bb and update README
 1202375 rename b to bb
 2091f88 delete a
-fbc0bb2 finished section6
-96da4a1 added new four files
-d673f05 update readme
-b3cf55f adding a text
-14aac92 新しいファイルの追加
-82b1418 update
-4ed1895 update
-132b89c initial commit
+...
+```
+
+```bash
+# タグを使ってcheckout
+$ git checkout anchor
 ```
