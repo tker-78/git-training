@@ -170,3 +170,61 @@ $ git restore --staged e
 
 
 
+### レポジトリからの削除
+
+`git rm`を使うと、削除と同時に変更をステージングしてくれる。
+
+```bash
+$ git rm a
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    a
+```
+
+これはOSのコマンド`rm`を使って、その後`git add`するのと等価。
+```bash
+$ rm a
+$ git add a
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    a
+```
+
+ステージングした後に`git commit`を行うことで、
+リポジトリに変更が反映される。
+
+
+```bash
+$ git commit -m 'deleting a'
+```
+
+### ファイル名の変更
+
+同様に、ファイル名を変更する場合は、
+gitのコマンド`git mv`か、osコマンド`mv` + `git add`を行う。
+
+### 部分的にステージングする
+変更箇所のうち、コミットしたくない箇所がある場合、
+部分的にステージングすることができる。
+
+```bash
+$ git add -e
+```
+
+vscodeでこの機能を使用する場合は、
+コードエディタのdefaultを`vim`に設定する
+```bash
+$ git config -e
+# 下記の行を追加する
+[core]
+    editor = vim
+```
+
