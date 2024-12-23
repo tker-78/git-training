@@ -281,6 +281,26 @@ $ git log --patch
 $ git log --stat
 ```
 
+```bash
+$ git log --graph --decorate --pretty=oneline --all --abbrev-commit
+* 711506c (HEAD -> master) update
+* cc4cd9a update
+* 6833726 update README
+* 57bfcf1 (origin/master) update README
+* 05fec74 add f
+* 5d85678 add bb and update README
+* 1202375 rename b to bb
+* 2091f88 delete a
+* fbc0bb2 finished section6
+* 96da4a1 added new four files
+* d673f05 update readme
+* b3cf55f adding a text
+* 14aac92 新しいファイルの追加
+* 82b1418 update
+* 4ed1895 update
+* 132b89c initial commit
+```
+
 
 ### 特定のバージョンのファイルを取り戻す
 
@@ -321,3 +341,17 @@ $ git log --oneline
 # タグを使ってcheckout
 $ git checkout anchor
 ```
+
+```bash
+# タグを削除する
+$ git tag -d anchor
+```
+
+### ブランチの運用
+
+```bash
+# コミットの経路をグラフで表示する
+$ git log --graph --decorate --pretty=oneline --all --abbrev-commit
+```
+
+
