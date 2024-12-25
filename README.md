@@ -384,3 +384,25 @@ cc4cd9a HEAD@{13}: commit: update
 6833726 HEAD@{16}: commit: update README
 57bfcf1 (origin/master) HEAD@{17}: commit: update README
 ```
+
+
+### 変更内容の一時的な退避(git stash)
+作業内容を一時的に保存する。
+メモのような位置付けで使う。
+作業中の状態ではコミットせずにスタッシュを使う。
+
+```bash
+# スタッシュの実行
+$ git stash
+Saved working directory and index state WIP on master: 5a06315 update
+
+# スタッシュの確認
+$ git stash list
+
+# スタッシュの取り出し
+$ git stash pop
+Dropped refs/stash@{0} (2d2bcb26dc08904211cbfdbd5c321bae64792e04)
+```
+
+
+
