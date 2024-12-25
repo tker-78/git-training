@@ -404,5 +404,27 @@ $ git stash pop
 Dropped refs/stash@{0} (2d2bcb26dc08904211cbfdbd5c321bae64792e04)
 ```
 
+### マージする
+
+```bash
+# masterブランチにdevブランチをマージする
+$ git checkout master
+$ git merge dev
+```
+
+```bash
+# ブランチの差分を確認する
+# masterに対してdevの増分
+$ git diff master...dev
+
+# 変更の区分のみ確認する
+$ git diff --name-status master...dev
+M       README.md
+```
+
+
+
+
+
 
 
