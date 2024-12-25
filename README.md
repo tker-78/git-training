@@ -422,9 +422,49 @@ $ git diff --name-status master...dev
 M       README.md
 ```
 
+```bash
+# ログを確認
+$ git log --graph --decorate --pretty=oneline --all --abgrev-commit
+*   c3622a6 (HEAD -> master) Merge branch 'dev'
+|\  
+* | 0c66fca stashを反映しました。
+* | 8d2b743 update bb
+| | * 41edafd (refs/stash) WIP on dev: d340c1e update readme
+| |/| 
+| | * c653be3 index on dev: d340c1e update readme
+| |/  
+| * d340c1e (dev) update readme
+| * 3741e24 update readme
+|/  
+* 4dcd887 update readme
+* 5a06315 (origin/master) update
+* 290ee84 update readme
+* efe2b2b new branch
+* 711506c update
+* cc4cd9a update
+* 6833726 update README
+* 57bfcf1 update README
+* 05fec74 add f
+* 5d85678 add bb and update README
+* 1202375 rename b to bb
+* 2091f88 delete a
+* fbc0bb2 finished section6
+* 96da4a1 added new four files
+* d673f05 update readme
+* b3cf55f adding a text
+* 14aac92 新しいファイルの追加
+* 82b1418 update
+* 4ed1895 update
+* 132b89c initial commit
+```
 
 
+```bash
+# マージコミットの親を確認する(最新のログ1件を取得する)
+$ git log -1
+```
 
+### コンフリクトの解消
 
 
 
