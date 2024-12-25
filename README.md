@@ -406,6 +406,13 @@ Dropped refs/stash@{0} (2d2bcb26dc08904211cbfdbd5c321bae64792e04)
 
 ### マージする
 
+```bash
+# masterブランチにdevブランチをマージする
+$ git checkout master
+$ git merge dev
+```
+
+
 
 
 
