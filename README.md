@@ -466,5 +466,49 @@ $ git log -1
 
 ### コンフリクトの解消
 
-### aaa
+```bash
+# マージツールの起動
+$ git mergetool
+```
+vimdiffが起動するが、使い方が難解なので、
+IDEのマージツールを使った方が良い。
+
+
+### マージを中止する
+
+```bash
+$ git merge --abort
+```
+
+すでに実行したマージを元に戻すには別の手順が必要。
+
+
+### fast-forward
+早送りマージ。masterの位置を子孫の先頭に移動する。
+
+
+### リモートの確認
+```bash
+$ git remote
+$ git remote -v show
+origin	git@github.com:tker-78/git-training.git (fetch)
+origin	git@github.com:tker-78/git-training.git (push)
+```
+
+```bash
+$ git branch --all
+* master
+  remotes/origin/master
+```
+
+```bash
+# リモートの一覧の取得
+$ git ls-remote
+5a0631534496e21ae1eaaafe2c6eb6c478587099	HEAD
+5a0631534496e21ae1eaaafe2c6eb6c478587099	refs/heads/master
+```
+
+
+
+
 
