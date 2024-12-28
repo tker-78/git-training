@@ -508,6 +508,22 @@ $ git ls-remote
 5a0631534496e21ae1eaaafe2c6eb6c478587099	refs/heads/master
 ```
 
+### プッシュする
+
+```bash
+$ git remote -v show origin
+* remote origin
+  Fetch URL: git@github.com:tker-78/git-training.git
+  Push  URL: git@github.com:tker-78/git-training.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+```
+
 
 
 
