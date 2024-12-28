@@ -59,6 +59,9 @@ $ git log --oneline
 # gitの設定を確認する
 $ git config --list
 
+# 正規表現にマッチする設定を確認する
+$ gir config --get-regexp branch
+
 # リポジトリの状態の確認
 $ git status
 
@@ -521,8 +524,28 @@ $ git remote -v show origin
   Local branch configured for 'git pull':
     master merges with remote master
   Local ref configured for 'git push':
-    master pushes to master (up to date)
+    master pushes to master (fast-forwardable)
 ```
+
+
+リモートに対してプッシュできるのは、それらの変更がリモートに
+存在する変更の子孫である場合に限られる。
+
+競合が発生する場合は最初にpullを行う必要がある。
+```bash
+$ git pull
+```
+
+*`git push --force`で競合を解消する方法もあるが、
+他ユーザーに影響を与える可能性があるので使わないこと。*
+
+
+### リモートにあるブランチを削除する
+
+
+
+
+
 
 
 
