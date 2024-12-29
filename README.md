@@ -148,7 +148,29 @@ $ git log --oneline
 
 # logの短い情報を付加して表示する
 $ git log --shortstat
+
+# mergeの履歴だけを表示する
+$ git log --merges
+
+# fileに影響を与えたコミットだけを表示する
+$ git log --oneline <filename>
+
+# コミットメッセージで一致するコミットのみを表示する
+$ git log --grep=update
+
+# 日時で制限する
+$ git log --since 10/10/2014 --until 10/24/2014
+
+# authorで制限する
+$ git log --author="Takuya Kinoshita"
 ```
+
+
+```bash
+# authorを表示する(-eはメールアドレス表示のスイッチ)
+$ git shortlog -e
+```
+
 
 ### git diff
 ステージング前のファイルに対して、変更内容を確認する。
