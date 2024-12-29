@@ -539,9 +539,38 @@ $ git pull
 *`git push --force`で競合を解消する方法もあるが、
 他ユーザーに影響を与える可能性があるので使わないこと。*
 
+### ローカルブランチの操作
 
-### リモートにあるブランチを削除する
+```bash
+# ローカルブランチの名前を変える
+$ git remote rename origin beginning
+```
 
+
+### リモートにあるブランチの操作
+
+```bash
+$ git ls-remote
+49dfccecbd6850eafbd533bd5ebc3b0389d8e7f2	HEAD
+a38e851cf4fce28fb8a13b4df85f79bd200c1dc5	refs/heads/dev
+49dfccecbd6850eafbd533bd5ebc3b0389d8e7f2	refs/heads/master
+```
+
+```bash
+# devブランチをリモートから削除する
+$ git push origin :dev
+To github.com:tker-78/git-training.git
+ - [deleted]         dev/regexp
+```
+
+
+### タグのpush
+```bash
+$ git tag
+$ git tag -a two_back -m "Two behind the HEAD" HEAD^^
+$ git push origin two_back
+$ git tad -d two_back
+```
 
 
 
