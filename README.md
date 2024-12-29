@@ -573,6 +573,26 @@ $ git tad -d two_back
 ```
 
 
+### git pull
+
+`pull`は、`fetch`と`merge`で構成される。
+
+```bash
+# fast-forwardのみのpullに限定する
+# 常にマージを手動で行うことになる
+$ git pull --ff-only
+```
+
+#### fetchとmergeに分けてpullを行う
+pullを行う場合、変更内容が見えないため、
+fetchとmergeに分けて実行することも考える。
+
+```bash
+$ git fetch
+$ git diff HEAD FETCH_HEAD
+```
+
+
 
 
 
